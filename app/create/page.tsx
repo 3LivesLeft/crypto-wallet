@@ -8,7 +8,7 @@ import styles from "../page.module.scss";
 export default function Create() {
   const [value, copy] = useCopyToClipboard();
   const userWalletKeys = Wallet.createRandom().mnemonic;
-  const userWallert = ethers.Wallet.fromMnemonic(
+  const userWallert = ethers.Wallet.fromPhrase(
     userWalletKeys ? userWalletKeys.phrase : ""
   );
 
@@ -41,7 +41,7 @@ export default function Create() {
       <Button
         text="Create Wallet"
         onClick={() => {
-          copy(userWalletKeys.phrase);
+          copy(userWalletKeys?.phrase ?? "");
           createWallet();
         }}
       />

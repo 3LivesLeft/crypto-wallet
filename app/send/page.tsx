@@ -22,7 +22,7 @@ export default function Send() {
   const sendEth = () => {
     const tx = {
       to: address,
-      value: ethers.utils.parseEther(amount),
+      value: ethers.parseEther(amount),
     };
     wallet?.sendTransaction(tx).then((txhash) => console.log(txhash));
   };

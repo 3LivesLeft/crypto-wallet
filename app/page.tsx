@@ -16,7 +16,7 @@ export default function Home() {
     walletProvider
       .getBalance(wallet.address)
       .then((balance) => {
-        setUserBalance(ethers.utils.formatEther(balance));
+        setUserBalance(ethers.formatEther(balance));
       })
       .catch((error) => console.error(error));
   }

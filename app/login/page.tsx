@@ -11,7 +11,7 @@ export default function Login() {
 
   const login = () => {
     const phrase = inputValues.toString().replaceAll(",", " ");
-    const userWallet = ethers.Wallet.fromMnemonic(phrase);
+    const userWallet = ethers.Wallet.fromPhrase(phrase);
     localStorage.setItem("pkey", userWallet.privateKey);
     window.location.href = "/";
   };
