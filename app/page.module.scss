@@ -51,11 +51,11 @@ $white: #fff;
   background-color: $white;
   align-self: center;
   border-radius: 4px;
+  line-break: anywhere;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: $blue;
-    // color: $white;
   }
 }
 
