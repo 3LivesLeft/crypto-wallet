@@ -11,11 +11,11 @@ export default function Send() {
   const [amount, setAmount] = useState("");
   const { wallet } = useWallet();
 
-  const handleAdress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleAdress = (e: React.SyntheticEvent<HTMLInputElement>) => {
     setAddress(e.currentTarget.value);
   };
 
-  const handleAmount = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleAmount = (e: React.SyntheticEvent<HTMLInputElement>) => {
     setAmount(e.currentTarget.value);
   };
 

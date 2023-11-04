@@ -16,7 +16,7 @@ export default function Login() {
     window.location.href = "/";
   };
 
-  function handleChange(e: React.KeyboardEvent<HTMLInputElement>, id: number) {
+  function handleChange(e: React.SyntheticEvent<HTMLInputElement>, id: number) {
     const newValue = e.currentTarget.value;
     setInputValues((prevValues) => {
       const newValues = [...prevValues];
